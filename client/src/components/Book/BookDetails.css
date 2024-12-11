@@ -1,0 +1,11 @@
+.Box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #252b48;
+  margin: 10px;
+  height: 82vh;
+  border-radius: 10px;
+  margin-bottom: 0 !important;
+  left: 0;
+}
