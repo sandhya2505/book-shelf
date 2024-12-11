@@ -3,7 +3,7 @@ import axios from "axios";
 import Book from "./Book";
 import { Box } from "@mui/material";
 
-const URL = "https://book-shelf-backend-f8kz.onrender.com/books";
+const URL = "http://localhost:5000/books";
 
 const fetchHandler = async () => {
   return await axios.get(URL).then((res) => res.data);

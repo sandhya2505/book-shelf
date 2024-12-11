@@ -11,7 +11,7 @@ const BookDetails = () => {
   useEffect(() => {
     const fetchHandler = async () => {
       await axios
-        .get(`https://book-shelf-backend-f8kz.onrender.com/books/${id}`)
+        .get(`http://localhost:5000/books/${id}`)
         .then((res) => res.data)
         .then((data) => setInputs(data.book));
     };
@@ -20,7 +20,7 @@ const BookDetails = () => {
 
   const sendRequest = async () => {
     await axios
-      .put(`https://book-shelf-backend-f8kz.onrender.com/books/${id}`, {
+      .put(`http://localhost:5000/books/${id}`, {
         bookname: String(inputs.bookname),
         author: String(inputs.author),
         description: String(inputs.description),
@@ -34,7 +34,7 @@ const BookDetails = () => {
     e.preventDefault();
     sendRequest()
       .then(() => history("/"))
-      .then(() => history("https://book-shelf-backend-f8kz.onrender.com/books"));
+      .then(() => history("http://localhost:5000/books"));
   };
 
   const handleChange = (e) => {

@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import "./AddBook.css";
 
 const AddBook = () => {
-  const URL = "https://book-shelf-backend-f8kz.onrender.com/books/";
+  const URL = "http://localhost:5000/books/";
   const history = useNavigate();
   const [inputs, setInputs] = useState({
     bookname: "",
